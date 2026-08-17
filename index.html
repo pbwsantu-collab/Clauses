@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clause Mastery · ৫০টি যুক্তকরণ প্রশ্ন (Noun, Adjective, Adverb)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Noto Sans Bengali', Arial, sans-serif;
+            background: #f5f2eb;
+            color: #1e2a3a;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #fffcf8;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-radius: 32px;
+            padding: 30px 25px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            border-left: 8px solid #c44536;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: #1e2a3a;
+        }
+        .subhead {
+            font-size: 1.1rem;
+            color: #4a5a6e;
+            margin-bottom: 30px;
+            padding-left: 28px;
+            border-bottom: 2px dashed #d9d0c5;
+            padding-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 48px;
+            background: #faf8f5;
+            border-radius: 28px;
+            padding: 24px 22px;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+        }
+        .section h2 {
+            font-size: 2rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+            color: #1e2a3a;
+        }
+        .section h2 span {
+            background: #c44536;
+            color: white;
+            font-size: 1rem;
+            padding: 4px 16px;
+            border-radius: 40px;
+            font-weight: 400;
+        }
+        .question-card {
+            background: white;
+            border-radius: 18px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+            border: 1px solid #eeeae4;
+            transition: 0.15s;
+        }
+        .question-card:hover {
+            border-color: #c9bdb0;
+        }
+        .q-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: #1f2c3f;
+        }
+        .q-text .num {
+            display: inline-block;
+            min-width: 32px;
+            color: #7a6b5e;
+            font-weight: 400;
+        }
+        .action-btn {
+            background: #eae3da;
+            border: none;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #1e2a3a;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 6px;
+        }
+        .action-btn:hover {
+            background: #d5cabc;
+            transform: scale(0.97);
+        }
+        .action-btn.show {
+            background: #c44536;
+            color: white;
+        }
+        .answer-box {
+            margin-top: 14px;
+            padding: 14px 18px;
+            background: #f3efe9;
+            border-radius: 16px;
+            border-left: 5px solid #c44536;
+            display: none;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        .answer-box.visible {
+            display: block;
+        }
+        .answer-box strong {
+            color: #1e2a3a;
+        }
+        .explanation {
+            color: #2d4057;
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px dashed #c9bdb0;
+        }
+        .badge {
+            display: inline-block;
+            background: #d9d0c5;
+            font-size: 0.7rem;
+            padding: 2px 10px;
+            border-radius: 30px;
+            color: #1e2a3a;
+            margin-left: 8px;
+            font-weight: 400;
+        }
+        .footnote {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5a6b7a;
+            border-top: 1px solid #e3dbd1;
+            padding-top: 25px;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 16px; }
+            h1 { font-size: 1.8rem; }
+            .section h2 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="app">
+    <h1>📘 Clause Mastery</h1>
+    <div class="subhead">✦ ৫০টি যুক্তকরণ প্রশ্ন — প্রতিটি Clause-এর জন্য (Noun, Adjective, Adverb) · উত্তর ও ব্যাখ্যা বাংলায়</div>
+
+    <!-- ============ NOUN CLAUSE ============ -->
+    <div class="section" id="nounSection">
+        <h2>📌 Noun Clause <span>৫০টি প্রশ্ন</span></h2>
+        <div id="nounContainer"></div>
+    </div>
+
+    <!-- ============ ADJECTIVE CLAUSE ============ -->
+    <div class="section" id="adjSection">
+        <h2>📌 Adjective Clause <span>৫০টি প্রশ্ন</span></h2>
+        <div id="adjContainer"></div>
+    </div>
+
+    <!-- ============ ADVERB CLAUSE ============ -->
+    <div class="section" id="advSection">
+        <h2>📌 Adverb Clause <span>৫০টি প্রশ্ন</span></h2>
+        <div id="advContainer"></div>
+    </div>
+
+    <div class="footnote">💡 প্রতিটি প্রশ্নের নিচে 'উত্তর দেখুন' ক্লিক করলে উত্তর ও ব্যাখ্যা দেখাবে।</div>
+</div>
+
+<script>
+    (function() {
+        // ---------- NOUN CLAUSE (৫০টি) ----------
+        const nounQuestions = [
+            { q: "He is honest. I believe it.", ans: "I believe that he is honest.", exp: "‘that he is honest’ একটি Noun Clause — believe-এর object." },
+            { q: "She will win. It is certain.", ans: "It is certain that she will win.", exp: "‘that she will win’ — Noun Clause as subject." },
+            { q: "Where does he live? Can you tell me?", ans: "Can you tell me where he lives?", exp: "‘where he lives’ — Noun Clause (tell me-এর object)." },
+            { q: "He said something. I didn't hear it.", ans: "I didn't hear what he said.", exp: "‘what he said’ — Noun Clause (hear-এর object)." },
+            { q: "The news is true. He has arrived.", ans: "The news is that he has arrived.", exp: "‘that he has arrived’ — Noun Clause (complement)." },
+            { q: "She knows the answer. How did she do it?", ans: "She knows how she did it.", exp: "‘how she did it’ — Noun Clause (knows-এর object)." },
+            { q: "I am sure. He will come.", ans: "I am sure that he will come.", exp: "‘that he will come’ — Noun Clause (sure-এর complement)." },
+            { q: "He is coming. Do you know?", ans: "Do you know if he is coming?", exp: "‘if he is coming’ — Noun Clause (know-এর object)." },
+            { q: "He asked me a question. Where are you going?", ans: "He asked me where I was going.", exp: "‘where I was going’ — Noun Clause (asked-এর object)." },
+            { q: "Please tell me. What is your name?", ans: "Please tell me what your name is.", exp: "‘what your name is’ — Noun Clause (tell me-এর object)." },
+            { q: "The problem is this. We have no money.", ans: "The problem is that we have no money.", exp: "‘that we have no money’ — Noun Clause (complement)." },
+            { q: "I don't know. Why did he leave?", ans: "I don't know why he left.", exp: "‘why he left’ — Noun Clause (know-এর object)." },
+            { q: "It is obvious. He is lying.", ans: "It is obvious that he is lying.", exp: "‘that he is lying’ — Noun Clause (subject)." },
+            { q: "She inquired. Is there any food?", ans: "She inquired if there was any food.", exp: "‘if there was any food’ — Noun Clause (inquired-এর object)." },
+            { q: "I wonder. Will she come today?", ans: "I wonder whether she will come today.", exp: "‘whether she will come today’ — Noun Clause." },
+            { q: "His success depends on this. He works hard.", ans: "His success depends on how hard he works.", exp: "‘how hard he works’ — Noun Clause (object of preposition)." },
+            { q: "We all believe. He is innocent.", ans: "We all believe that he is innocent.", exp: "‘that he is innocent’ — Noun Clause (believe-এর object)." },
+            { q: "Tell me the truth. Did you steal it?", ans: "Tell me if you stole it.", exp: "‘if you stole it’ — Noun Clause." },
+            { q: "I don't care. What do they think?", ans: "I don't care what they think.", exp: "‘what they think’ — Noun Clause (care-এর object)." },
+            { q: "The question is this. Will he agree?", ans: "The question is whether he will agree.", exp: "‘whether he will agree’ — Noun Clause (complement)." },
+            { q: "I have no idea. Where is she?", ans: "I have no idea where she is.", exp: "‘where she is’ — Noun Clause (idea-এর complement)." },
+            { q: "He explained. Why he was late.", ans: "He explained why he was late.", exp: "‘why he was late’ — Noun Clause." },
+            { q: "I don't remember. What did I do?", ans: "I don't remember what I did.", exp: "‘what I did’ — Noun Clause." },
+            { q: "It is a fact. He is honest.", ans: "It is a fact that he is honest.", exp: "‘that he is honest’ — Noun Clause." },
+            { q: "She doesn't know. When will he arrive?", ans: "She doesn't know when he will arrive.", exp: "‘when he will arrive’ — Noun Clause." },
+            { q: "We were curious. Why was she crying?", ans: "We were curious why she was crying.", exp: "‘why she was crying’ — Noun Clause." },
+            { q: "I think so. He is a good man.", ans: "I think that he is a good man.", exp: "‘that he is a good man’ — Noun Clause." },
+            { q: "He doesn't understand. What is the problem?", ans: "He doesn't understand what the problem is.", exp: "‘what the problem is’ — Noun Clause." },
+            { q: "Can you guess? Where did he go?", ans: "Can you guess where he went?", exp: "‘where he went’ — Noun Clause." },
+            { q: "She is upset. He forgot her birthday.", ans: "She is upset that he forgot her birthday.", exp: "‘that he forgot her birthday’ — Noun Clause." },
+            { q: "He admitted. He had made a mistake.", ans: "He admitted that he had made a mistake.", exp: "‘that he had made a mistake’ — Noun Clause." },
+            { q: "I don't know. How does this machine work?", ans: "I don't know how this machine works.", exp: "‘how this machine works’ — Noun Clause." },
+            { q: "The truth is. He is not guilty.", ans: "The truth is that he is not guilty.", exp: "‘that he is not guilty’ — Noun Clause." },
+            { q: "He asked me. Did you finish the work?", ans: "He asked me if I had finished the work.", exp: "‘if I had finished the work’ — Noun Clause." },
+            { q: "Nobody knows. Why did he resign?", ans: "Nobody knows why he resigned.", exp: "‘why he resigned’ — Noun Clause." },
+            { q: "I realized. I was wrong.", ans: "I realized that I was wrong.", exp: "‘that I was wrong’ — Noun Clause." },
+            { q: "Tell me. Which book do you want?", ans: "Tell me which book you want.", exp: "‘which book you want’ — Noun Clause." },
+            { q: "He couldn't decide. What should he wear?", ans: "He couldn't decide what he should wear.", exp: "‘what he should wear’ — Noun Clause." },
+            { q: "It seems. He is tired.", ans: "It seems that he is tired.", exp: "‘that he is tired’ — Noun Clause." },
+            { q: "I don't mind. What do you do?", ans: "I don't mind what you do.", exp: "‘what you do’ — Noun Clause." },
+            { q: "She told me. She would be late.", ans: "She told me that she would be late.", exp: "‘that she would be late’ — Noun Clause." },
+            { q: "We are happy. You have succeeded.", ans: "We are happy that you have succeeded.", exp: "‘that you have succeeded’ — Noun Clause." },
+            { q: "I can't imagine. What will happen next?", ans: "I can't imagine what will happen next.", exp: "‘what will happen next’ — Noun Clause." },
+            { q: "He doesn't believe. She can win.", ans: "He doesn't believe that she can win.", exp: "‘that she can win’ — Noun Clause." },
+            { q: "Please confirm. Is the meeting at 5?", ans: "Please confirm if the meeting is at 5.", exp: "‘if the meeting is at 5’ — Noun Clause." },
+            { q: "The point is. We must act now.", ans: "The point is that we must act now.", exp: "‘that we must act now’ — Noun Clause." },
+            { q: "I don't understand. Why are you angry?", ans: "I don't understand why you are angry.", exp: "‘why you are angry’ — Noun Clause." },
+            { q: "He insisted. He was right.", ans: "He insisted that he was right.", exp: "‘that he was right’ — Noun Clause." },
+            { q: "They asked. Where is the station?", ans: "They asked where the station was.", exp: "‘where the station was’ — Noun Clause." },
+            { q: "It doesn't matter. Who will come?", ans: "It doesn't matter who will come.", exp: "‘who will come’ — Noun Clause." },
+        ];
+
+        // ---------- ADJECTIVE CLAUSE (৫০টি) ----------
+        const adjQuestions = [
+            { q: "I have a friend. He lives in Delhi.", ans: "I have a friend who lives in Delhi.", exp: "‘who lives in Delhi’ — Adjective Clause, friend-কে বিশেষিত করছে।" },
+            { q: "The book is interesting. You gave it to me.", ans: "The book that you gave to me is interesting.", exp: "‘that you gave to me’ — Adjective Clause, book-কে বিশেষিত করছে।" },
+            { q: "This is the school. I studied there.", ans: "This is the school where I studied.", exp: "‘where I studied’ — Adjective Clause, school-কে বিশেষিত করছে।" },
+            { q: "The girl is my sister. She is wearing a red dress.", ans: "The girl who is wearing a red dress is my sister.", exp: "‘who is wearing a red dress’ — Adjective Clause." },
+            { q: "I lost the pen. You gave me that pen.", ans: "I lost the pen that you gave me.", exp: "‘that you gave me’ — Adjective Clause." },
+            { q: "The house is big. He lives in it.", ans: "The house where he lives is big.", exp: "‘where he lives’ — Adjective Clause." },
+            { q: "I know the man. He is a doctor.", ans: "I know the man who is a doctor.", exp: "‘who is a doctor’ — Adjective Clause." },
+            { q: "This is the story. I told you about it.", ans: "This is the story that I told you about.", exp: "‘that I told you about’ — Adjective Clause." },
+            { q: "The children are playing. They are my neighbors.", ans: "The children who are playing are my neighbors.", exp: "‘who are playing’ — Adjective Clause." },
+            { q: "The bag is heavy. She is carrying it.", ans: "The bag that she is carrying is heavy.", exp: "‘that she is carrying’ — Adjective Clause." },
+            { q: "He is the artist. His painting won the prize.", ans: "He is the artist whose painting won the prize.", exp: "‘whose painting won the prize’ — Adjective Clause." },
+            { q: "I saw the bird. It was singing.", ans: "I saw the bird which was singing.", exp: "‘which was singing’ — Adjective Clause." },
+            { q: "That is the hotel. We stayed there.", ans: "That is the hotel where we stayed.", exp: "‘where we stayed’ — Adjective Clause." },
+            { q: "The man is our teacher. He is talking to the principal.", ans: "The man who is talking to the principal is our teacher.", exp: "‘who is talking…’ — Adjective Clause." },
+            { q: "The watch is expensive. I bought it yesterday.", ans: "The watch that I bought yesterday is expensive.", exp: "‘that I bought yesterday’ — Adjective Clause." },
+            { q: "I remember the day. We first met on that day.", ans: "I remember the day when we first met.", exp: "‘when we first met’ — Adjective Clause." },
+            { q: "She has a brother. He lives in London.", ans: "She has a brother who lives in London.", exp: "‘who lives in London’ — Adjective Clause." },
+            { q: "The flowers are beautiful. They are in the garden.", ans: "The flowers which are in the garden are beautiful.", exp: "‘which are in the garden’ — Adjective Clause." },
+            { q: "The doctor cured me. He was very kind.", ans: "The doctor who cured me was very kind.", exp: "‘who cured me’ — Adjective Clause." },
+            { q: "I found the key. I had lost it.", ans: "I found the key that I had lost.", exp: "‘that I had lost’ — Adjective Clause." },
+            { q: "The movie was boring. We saw it last night.", ans: "The movie which we saw last night was boring.", exp: "‘which we saw last night’ — Adjective Clause." },
+            { q: "He is the author. His books are famous.", ans: "He is the author whose books are famous.", exp: "‘whose books are famous’ — Adjective Clause." },
+            { q: "The park is beautiful. We walk there every evening.", ans: "The park where we walk every evening is beautiful.", exp: "‘where we walk every evening’ — Adjective Clause." },
+            { q: "I have a dog. It is very friendly.", ans: "I have a dog which is very friendly.", exp: "‘which is very friendly’ — Adjective Clause." },
+            { q: "The woman is my aunt. She is wearing a blue saree.", ans: "The woman who is wearing a blue saree is my aunt.", exp: "‘who is wearing…’ — Adjective Clause." },
+            { q: "The computer is new. I bought it online.", ans: "The computer that I bought online is new.", exp: "‘that I bought online’ — Adjective Clause." },
+            { q: "This is the place. I was born there.", ans: "This is the place where I was born.", exp: "‘where I was born’ — Adjective Clause." },
+            { q: "The boy is my cousin. He won the race.", ans: "The boy who won the race is my cousin.", exp: "‘who won the race’ — Adjective Clause." },
+            { q: "The cake was delicious. She baked it.", ans: "The cake that she baked was delicious.", exp: "‘that she baked’ — Adjective Clause." },
+            { q: "He is the manager. His advice is always helpful.", ans: "He is the manager whose advice is always helpful.", exp: "‘whose advice is always helpful’ — Adjective Clause." },
+            { q: "I saw the car. It was parked outside.", ans: "I saw the car which was parked outside.", exp: "‘which was parked outside’ — Adjective Clause." },
+            { q: "The student is brilliant. She stood first.", ans: "The student who stood first is brilliant.", exp: "‘who stood first’ — Adjective Clause." },
+            { q: "The necklace is expensive. She wore it.", ans: "The necklace that she wore is expensive.", exp: "‘that she wore’ — Adjective Clause." },
+            { q: "This is the village. I spent my childhood there.", ans: "This is the village where I spent my childhood.", exp: "‘where I spent my childhood’ — Adjective Clause." },
+            { q: "The singer is famous. She is performing tonight.", ans: "The singer who is performing tonight is famous.", exp: "‘who is performing tonight’ — Adjective Clause." },
+            { q: "The letter has arrived. I was expecting it.", ans: "The letter that I was expecting has arrived.", exp: "‘that I was expecting’ — Adjective Clause." },
+            { q: "The man is a scientist. He discovered the cure.", ans: "The man who discovered the cure is a scientist.", exp: "‘who discovered the cure’ — Adjective Clause." },
+            { q: "The ring is made of gold. She lost it.", ans: "The ring that she lost is made of gold.", exp: "‘that she lost’ — Adjective Clause." },
+            { q: "I know the girl. Her father is a doctor.", ans: "I know the girl whose father is a doctor.", exp: "‘whose father is a doctor’ — Adjective Clause." },
+            { q: "The beach is crowded. We went there yesterday.", ans: "The beach where we went yesterday is crowded.", exp: "‘where we went yesterday’ — Adjective Clause." },
+            { q: "The teacher is strict. She teaches us math.", ans: "The teacher who teaches us math is strict.", exp: "‘who teaches us math’ — Adjective Clause." },
+            { q: "The food was spicy. I ate it.", ans: "The food that I ate was spicy.", exp: "‘that I ate’ — Adjective Clause." },
+            { q: "He is the consultant. His ideas are innovative.", ans: "He is the consultant whose ideas are innovative.", exp: "‘whose ideas are innovative’ — Adjective Clause." },
+            { q: "The garden is lovely. She works in it.", ans: "The garden where she works is lovely.", exp: "‘where she works’ — Adjective Clause." },
+            { q: "The animal is a kangaroo. It is hopping.", ans: "The animal which is hopping is a kangaroo.", exp: "‘which is hopping’ — Adjective Clause." },
+            { q: "The architect is famous. He designed this building.", ans: "The architect who designed this building is famous.", exp: "‘who designed this building’ — Adjective Clause." },
+            { q: "The story is true. He told me it.", ans: "The story that he told me is true.", exp: "‘that he told me’ — Adjective Clause." },
+            { q: "The village is remote. He was born there.", ans: "The village where he was born is remote.", exp: "‘where he was born’ — Adjective Clause." },
+            { q: "The actor is my favorite. He won the Oscar.", ans: "The actor who won the Oscar is my favorite.", exp: "‘who won the Oscar’ — Adjective Clause." },
+            { q: "The book is on the table. It belongs to me.", ans: "The book that is on the table belongs to me.", exp: "‘that is on the table’ — Adjective Clause." },
+        ];
+
+        // ---------- ADVERB CLAUSE (৫০টি) ----------
+        const advQuestions = [
+            { q: "He is poor. He is happy.", ans: "Though he is poor, he is happy.", exp: "‘Though he is poor’ — Adverb Clause of Concession." },
+            { q: "I finished my work. I went out to play.", ans: "After I finished my work, I went out to play.", exp: "‘After I finished my work’ — Adverb Clause of Time." },
+            { q: "He works hard. He wants to succeed.", ans: "He works hard so that he can succeed.", exp: "‘so that he can succeed’ — Adverb Clause of Purpose." },
+            { q: "She is very tired. She cannot walk.", ans: "She is so tired that she cannot walk.", exp: "‘so tired that she cannot walk’ — Adverb Clause of Result." },
+            { q: "You start now. You will miss the bus.", ans: "If you don't start now, you will miss the bus.", exp: "‘If you don't start now’ — Adverb Clause of Condition." },
+            { q: "He was ill. He went to school.", ans: "Although he was ill, he went to school.", exp: "‘Although he was ill’ — Adverb Clause of Concession." },
+            { q: "We reached the station. The train had left.", ans: "When we reached the station, the train had left.", exp: "‘When we reached the station’ — Adverb Clause of Time." },
+            { q: "She spoke loudly. Everyone could hear her.", ans: "She spoke loudly so that everyone could hear her.", exp: "‘so that everyone could hear her’ — Purpose." },
+            { q: "He is tall. His brother is taller.", ans: "He is not as tall as his brother is.", exp: "‘as his brother is’ — Adverb Clause of Comparison." },
+            { q: "He didn't eat. He was not hungry.", ans: "He didn't eat because he was not hungry.", exp: "‘because he was not hungry’ — Adverb Clause of Reason." },
+            { q: "I will wait. You come back.", ans: "I will wait until you come back.", exp: "‘until you come back’ — Adverb Clause of Time." },
+            { q: "He ran fast. He could catch the train.", ans: "He ran fast so that he could catch the train.", exp: "Purpose." },
+            { q: "She is intelligent. She is humble.", ans: "Though she is intelligent, she is humble.", exp: "Concession." },
+            { q: "We left early. We reached on time.", ans: "We left early so that we could reach on time.", exp: "Purpose." },
+            { q: "He speaks English fluently. He is a foreigner.", ans: "He speaks English as if he is a foreigner.", exp: "‘as if he is a foreigner’ — Adverb Clause of Manner." },
+            { q: "I will come. I am free.", ans: "I will come if I am free.", exp: "Condition." },
+            { q: "He worked hard. He failed.", ans: "Though he worked hard, he failed.", exp: "Concession." },
+            { q: "She was angry. She didn't speak.", ans: "She was so angry that she didn't speak.", exp: "Result." },
+            { q: "We stopped. The light turned red.", ans: "We stopped because the light turned red.", exp: "Reason." },
+            { q: "He will go. He finishes his homework.", ans: "He will go after he finishes his homework.", exp: "Time." },
+            { q: "She is rich. She is not happy.", ans: "Although she is rich, she is not happy.", exp: "Concession." },
+            { q: "He ate quickly. He wouldn't be late.", ans: "He ate quickly so that he wouldn't be late.", exp: "Purpose." },
+            { q: "It rained. The match was cancelled.", ans: "It rained so hard that the match was cancelled.", exp: "Result." },
+            { q: "He didn't study. He failed the exam.", ans: "He didn't study, so he failed the exam.", exp: "(কিন্তু Clause-টি ‘because’ দিয়েও করা যায়) — because he didn't study, he failed." },
+            { q: "I will phone you. I reach home.", ans: "I will phone you as soon as I reach home.", exp: "Time." },
+            { q: "She behaves. She is the boss.", ans: "She behaves as if she is the boss.", exp: "Manner." },
+            { q: "He is old. He is active.", ans: "Though he is old, he is active.", exp: "Concession." },
+            { q: "We walked slowly. We could enjoy the view.", ans: "We walked slowly so that we could enjoy the view.", exp: "Purpose." },
+            { q: "He didn't eat anything. He was ill.", ans: "He didn't eat anything because he was ill.", exp: "Reason." },
+            { q: "She passed. She worked hard.", ans: "She passed because she worked hard.", exp: "Reason." },
+            { q: "I will stay. You need me.", ans: "I will stay as long as you need me.", exp: "Condition." },
+            { q: "He didn't win. He tried his best.", ans: "Though he tried his best, he didn't win.", exp: "Concession." },
+            { q: "The sun set. We returned home.", ans: "When the sun set, we returned home.", exp: "Time." },
+            { q: "She is very busy. She helps me.", ans: "Although she is very busy, she helps me.", exp: "Concession." },
+            { q: "He spoke slowly. I could understand him.", ans: "He spoke slowly so that I could understand him.", exp: "Purpose." },
+            { q: "The box is heavy. I cannot lift it.", ans: "The box is so heavy that I cannot lift it.", exp: "Result." },
+            { q: "You help me. I will help you.", ans: "If you help me, I will help you.", exp: "Condition." },
+            { q: "She is clever. Her brother is cleverer.", ans: "She is not as clever as her brother is.", exp: "Comparison." },
+            { q: "He arrived late. He missed the train.", ans: "He arrived late, so he missed the train.", exp: "Result (so that)." },
+            { q: "We went to the market. We bought some vegetables.", ans: "We went to the market so that we could buy some vegetables.", exp: "Purpose." },
+            { q: "I forgot my umbrella. It was raining.", ans: "I forgot my umbrella because it was raining.", exp: "Reason." },
+            { q: "She will stay. She gets a call.", ans: "She will stay until she gets a call.", exp: "Time." },
+            { q: "He is a good player. He didn't perform well.", ans: "Although he is a good player, he didn't perform well.", exp: "Concession." },
+            { q: "He was tired. He continued working.", ans: "Although he was tired, he continued working.", exp: "Concession." },
+            { q: "I will do it. You allow me.", ans: "I will do it if you allow me.", exp: "Condition." },
+            { q: "The coffee was hot. I couldn't drink it.", ans: "The coffee was so hot that I couldn't drink it.", exp: "Result." },
+            { q: "She cried. She had lost her ring.", ans: "She cried because she had lost her ring.", exp: "Reason." },
+            { q: "He left early. He would avoid traffic.", ans: "He left early so that he could avoid traffic.", exp: "Purpose." },
+            { q: "I will wait here. You return.", ans: "I will wait here until you return.", exp: "Time." },
+            { q: "It was dark. We couldn't see anything.", ans: "It was so dark that we couldn't see anything.", exp: "Result." },
+        ];
+
+        // ---------- RENDER ----------
+        function renderQuestions(containerId, questions, type) {
+            const container = document.getElementById(containerId);
+            let html = '';
+            questions.forEach((item, index) => {
+                const num = index + 1;
+                html += `
+                    <div class="question-card" data-index="${index}">
+                        <div class="q-text"><span class="num">${num}.</span> ${item.q}</div>
+                        <button class="action-btn" data-target="ans-${type}-${index}">🔍 উত্তর দেখুন</button>
+                        <div id="ans-${type}-${index}" class="answer-box">
+                            <strong>✅ উত্তর:</strong> ${item.ans}
+                            <div class="explanation"><strong>📘 ব্যাখ্যা:</strong> ${item.exp}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+
+            // attach click events (delegation)
+            container.querySelectorAll('.action-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const targetId = this.dataset.target;
+                    const answerDiv = document.getElementById(targetId);
+                    if (answerDiv) {
+                        answerDiv.classList.toggle('visible');
+                        this.classList.toggle('show');
+                        this.textContent = answerDiv.classList.contains('visible') ? '🙈 উত্তর লুকান' : '🔍 উত্তর দেখুন';
+                    }
+                });
+            });
+        }
+
+        renderQuestions('nounContainer', nounQuestions, 'noun');
+        renderQuestions('adjContainer', adjQuestions, 'adj');
+        renderQuestions('advContainer', advQuestions, 'adv');
+
+    })();
+</script>
+</body>
+  </html>
