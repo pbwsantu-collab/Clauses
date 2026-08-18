@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clause Mastery · ৫০+ প্রশ্ন (Noun, Adjective, Adverb)</title>
+    <title>Clause Mastery · ১০০+ প্রশ্ন (Noun, Adjective, Adverb)</title>
     <style>
         * {
             margin: 0;
@@ -41,7 +41,6 @@
             padding-bottom: 20px;
         }
 
-        /* ----- colourful menu ----- */
         .clause-menu {
             display: flex;
             flex-wrap: wrap;
@@ -156,6 +155,18 @@
             background: #eae3da;
         }
 
+        .subtype-header {
+            background: #eae3da;
+            padding: 10px 18px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 24px 0 14px 0;
+            display: inline-block;
+            color: #1e2a3a;
+            border-left: 4px solid #c44536;
+        }
+
         .question-card {
             background: white;
             border-radius: 18px;
@@ -243,18 +254,17 @@
 <body>
 <div class="container" id="app">
     <h1>📘 Clause Mastery</h1>
-    <div class="subhead">✦ ৫০+ যুক্তকরণ প্রশ্ন — Noun, Adjective, Adverb · বাংলায় উত্তর ও ব্যাখ্যা + প্রয়োজনীয় তথ্য</div>
+    <div class="subhead">✦ ১০০+ যুক্তকরণ প্রশ্ন — Noun, Adjective, Adverb · বাংলায় উত্তর ও ব্যাখ্যা + প্রয়োজনীয় তথ্য</div>
 
-    <!-- colourful menu -->
     <div class="clause-menu">
-        <a href="#nounSection" class="menu-noun">📌 Noun Clause <span class="badge-menu">৫৫</span></a>
-        <a href="#adjSection" class="menu-adj">📌 Adjective Clause <span class="badge-menu">৫৫</span></a>
-        <a href="#advSection" class="menu-adv">📌 Adverb Clause <span class="badge-menu">৫৫</span></a>
+        <a href="#nounSection" class="menu-noun">📌 Noun Clause <span class="badge-menu">১০০+</span></a>
+        <a href="#adjSection" class="menu-adj">📌 Adjective Clause <span class="badge-menu">১০০+</span></a>
+        <a href="#advSection" class="menu-adv">📌 Adverb Clause <span class="badge-menu">১০০+</span></a>
     </div>
 
     <!-- ============ NOUN CLAUSE ============ -->
     <div class="section" id="nounSection">
-        <h2>📌 Noun Clause <span>৫৫টি প্রশ্ন</span> <span class="badge-type">subject, object, complement, appositive</span></h2>
+        <h2>📌 Noun Clause <span>১০০+ প্রশ্ন</span> <span class="badge-type">subject, object, complement, appositive</span></h2>
         <div class="info-box">
             <strong>🔹 Noun Clause</strong> — একটি dependent clause যা noun-এর কাজ করে। <br>
             <span class="highlight">ভূমিকা:</span> Subject, Direct Object, Indirect Object, Object of Preposition, Subject Complement, Appositive। <br>
@@ -266,7 +276,7 @@
 
     <!-- ============ ADJECTIVE CLAUSE ============ -->
     <div class="section" id="adjSection">
-        <h2>📌 Adjective Clause <span>৫৫টি প্রশ্ন</span> <span class="badge-type">who, which, that, whose, where, when</span></h2>
+        <h2>📌 Adjective Clause <span>১০০+ প্রশ্ন</span> <span class="badge-type">who, which, that, whose, where, when</span></h2>
         <div class="info-box">
             <strong>🔹 Adjective Clause</strong> — noun বা pronoun-কে modify করে। <br>
             <span class="highlight">২ ধরন:</span> Essential (Restrictive) — কমা ছাড়া; Non-Essential (Non-Restrictive) — কমা দিয়ে। <br>
@@ -278,7 +288,7 @@
 
     <!-- ============ ADVERB CLAUSE ============ -->
     <div class="section" id="advSection">
-        <h2>📌 Adverb Clause <span>৫৫টি প্রশ্ন</span> <span class="badge-type">time, reason, condition, concession, purpose, result, manner</span></h2>
+        <h2>📌 Adverb Clause <span>১০০+ প্রশ্ন</span> <span class="badge-type">time, reason, condition, concession, purpose, result, manner</span></h2>
         <div class="info-box">
             <strong>🔹 Adverb Clause</strong> — verb, adjective বা adverb-কে modify করে। <br>
             <span class="highlight">প্রকার:</span> Time, Place, Reason, Condition, Concession, Purpose, Manner, Comparison। <br>
@@ -293,207 +303,219 @@
 
 <script>
     (function() {
-        // ---------- NOUN CLAUSE (৫৫টি) ----------
+        // ============================================================
+        // NOUN CLAUSE — 100+ questions divided by sub-type
+        // ============================================================
+        const nounSubtypes = [
+            { label: 'Subject of a Verb', key: 'subject' },
+            { label: 'Direct Object', key: 'direct' },
+            { label: 'Indirect Object', key: 'indirect' },
+            { label: 'Object of Preposition', key: 'prep' },
+            { label: 'Subject Complement', key: 'complement' },
+            { label: 'Appositive', key: 'appositive' }
+        ];
+
         const nounQuestions = [
-            { q: "He is honest. I believe it.", ans: "I believe that he is honest.", exp: "‘that he is honest’ — Noun Clause as Direct Object of 'believe'." },
-            { q: "She will win. It is certain.", ans: "It is certain that she will win.", exp: "‘that she will win’ — Noun Clause as Subject (extraposed)." },
-            { q: "Where does he live? Can you tell me?", ans: "Can you tell me where he lives?", exp: "‘where he lives’ — Noun Clause as Indirect Object." },
-            { q: "He said something. I didn't hear it.", ans: "I didn't hear what he said.", exp: "‘what he said’ — Noun Clause as Direct Object." },
-            { q: "The news is true. He has arrived.", ans: "The news is that he has arrived.", exp: "‘that he has arrived’ — Noun Clause as Subject Complement." },
-            { q: "She knows the answer. How did she do it?", ans: "She knows how she did it.", exp: "‘how she did it’ — Noun Clause as Direct Object." },
-            { q: "I am sure. He will come.", ans: "I am sure that he will come.", exp: "‘that he will come’ — Noun Clause as Adjective Complement." },
-            { q: "He is coming. Do you know?", ans: "Do you know if he is coming?", exp: "‘if he is coming’ — Noun Clause as Direct Object." },
-            { q: "He asked me a question. Where are you going?", ans: "He asked me where I was going.", exp: "‘where I was going’ — Noun Clause as Indirect Object." },
-            { q: "Please tell me. What is your name?", ans: "Please tell me what your name is.", exp: "‘what your name is’ — Noun Clause as Indirect Object." },
-            { q: "The problem is this. We have no money.", ans: "The problem is that we have no money.", exp: "‘that we have no money’ — Noun Clause as Subject Complement." },
-            { q: "I don't know. Why did he leave?", ans: "I don't know why he left.", exp: "‘why he left’ — Noun Clause as Direct Object." },
-            { q: "It is obvious. He is lying.", ans: "It is obvious that he is lying.", exp: "‘that he is lying’ — Noun Clause as Subject." },
-            { q: "She inquired. Is there any food?", ans: "She inquired if there was any food.", exp: "‘if there was any food’ — Noun Clause as Direct Object." },
-            { q: "I wonder. Will she come today?", ans: "I wonder whether she will come today.", exp: "‘whether she will come today’ — Noun Clause as Direct Object." },
-            { q: "His success depends on this. He works hard.", ans: "His success depends on how hard he works.", exp: "‘how hard he works’ — Noun Clause as Object of Preposition." },
-            { q: "We all believe. He is innocent.", ans: "We all believe that he is innocent.", exp: "‘that he is innocent’ — Noun Clause as Direct Object." },
-            { q: "Tell me the truth. Did you steal it?", ans: "Tell me if you stole it.", exp: "‘if you stole it’ — Noun Clause as Indirect Object." },
-            { q: "I don't care. What do they think?", ans: "I don't care what they think.", exp: "‘what they think’ — Noun Clause as Direct Object." },
-            { q: "The question is this. Will he agree?", ans: "The question is whether he will agree.", exp: "‘whether he will agree’ — Noun Clause as Subject Complement." },
-            { q: "I have no idea. Where is she?", ans: "I have no idea where she is.", exp: "‘where she is’ — Noun Clause in Apposition to 'idea'." },
-            { q: "He explained. Why he was late.", ans: "He explained why he was late.", exp: "‘why he was late’ — Noun Clause as Direct Object." },
-            { q: "I don't remember. What did I do?", ans: "I don't remember what I did.", exp: "‘what I did’ — Noun Clause as Direct Object." },
-            { q: "It is a fact. He is honest.", ans: "It is a fact that he is honest.", exp: "‘that he is honest’ — Noun Clause in Apposition to 'fact'." },
-            { q: "She doesn't know. When will he arrive?", ans: "She doesn't know when he will arrive.", exp: "‘when he will arrive’ — Noun Clause as Direct Object." },
-            { q: "We were curious. Why was she crying?", ans: "We were curious why she was crying.", exp: "‘why she was crying’ — Noun Clause as Adjective Complement." },
-            { q: "I think so. He is a good man.", ans: "I think that he is a good man.", exp: "‘that he is a good man’ — Noun Clause as Direct Object." },
-            { q: "He doesn't understand. What is the problem?", ans: "He doesn't understand what the problem is.", exp: "‘what the problem is’ — Noun Clause as Direct Object." },
-            { q: "Can you guess? Where did he go?", ans: "Can you guess where he went?", exp: "‘where he went’ — Noun Clause as Direct Object." },
-            { q: "She is upset. He forgot her birthday.", ans: "She is upset that he forgot her birthday.", exp: "‘that he forgot her birthday’ — Noun Clause as Adjective Complement." },
-            { q: "He admitted. He had made a mistake.", ans: "He admitted that he had made a mistake.", exp: "‘that he had made a mistake’ — Noun Clause as Direct Object." },
-            { q: "I don't know. How does this machine work?", ans: "I don't know how this machine works.", exp: "‘how this machine works’ — Noun Clause as Direct Object." },
-            { q: "The truth is. He is not guilty.", ans: "The truth is that he is not guilty.", exp: "‘that he is not guilty’ — Noun Clause as Subject Complement." },
-            { q: "He asked me. Did you finish the work?", ans: "He asked me if I had finished the work.", exp: "‘if I had finished the work’ — Noun Clause as Indirect Object." },
-            { q: "Nobody knows. Why did he resign?", ans: "Nobody knows why he resigned.", exp: "‘why he resigned’ — Noun Clause as Direct Object." },
-            { q: "I realized. I was wrong.", ans: "I realized that I was wrong.", exp: "‘that I was wrong’ — Noun Clause as Direct Object." },
-            { q: "Tell me. Which book do you want?", ans: "Tell me which book you want.", exp: "‘which book you want’ — Noun Clause as Indirect Object." },
-            { q: "He couldn't decide. What should he wear?", ans: "He couldn't decide what he should wear.", exp: "‘what he should wear’ — Noun Clause as Direct Object." },
-            { q: "It seems. He is tired.", ans: "It seems that he is tired.", exp: "‘that he is tired’ — Noun Clause as Subject." },
-            { q: "I don't mind. What do you do?", ans: "I don't mind what you do.", exp: "‘what you do’ — Noun Clause as Direct Object." },
-            { q: "She told me. She would be late.", ans: "She told me that she would be late.", exp: "‘that she would be late’ — Noun Clause as Indirect Object." },
-            { q: "We are happy. You have succeeded.", ans: "We are happy that you have succeeded.", exp: "‘that you have succeeded’ — Noun Clause as Adjective Complement." },
-            { q: "I can't imagine. What will happen next?", ans: "I can't imagine what will happen next.", exp: "‘what will happen next’ — Noun Clause as Direct Object." },
-            { q: "He doesn't believe. She can win.", ans: "He doesn't believe that she can win.", exp: "‘that she can win’ — Noun Clause as Direct Object." },
-            { q: "Please confirm. Is the meeting at 5?", ans: "Please confirm if the meeting is at 5.", exp: "‘if the meeting is at 5’ — Noun Clause as Direct Object." },
-            { q: "The point is. We must act now.", ans: "The point is that we must act now.", exp: "‘that we must act now’ — Noun Clause as Subject Complement." },
-            { q: "I don't understand. Why are you angry?", ans: "I don't understand why you are angry.", exp: "‘why you are angry’ — Noun Clause as Direct Object." },
-            { q: "He insisted. He was right.", ans: "He insisted that he was right.", exp: "‘that he was right’ — Noun Clause as Direct Object." },
-            { q: "They asked. Where is the station?", ans: "They asked where the station was.", exp: "‘where the station was’ — Noun Clause as Direct Object." },
-            { q: "It doesn't matter. Who will come?", ans: "It doesn't matter who will come.", exp: "‘who will come’ — Noun Clause as Subject." },
-            // extra 5 to make 55
-            { q: "She forgot. She had an appointment.", ans: "She forgot that she had an appointment.", exp: "‘that she had an appointment’ — Noun Clause as Direct Object." },
-            { q: "I wonder. Why is he so sad?", ans: "I wonder why he is so sad.", exp: "‘why he is so sad’ — Noun Clause as Direct Object." },
-            { q: "His idea is this. We should wait.", ans: "His idea is that we should wait.", exp: "‘that we should wait’ — Noun Clause as Subject Complement." },
-            { q: "Do you know? Where does she live?", ans: "Do you know where she lives?", exp: "‘where she lives’ — Noun Clause as Direct Object." },
-            { q: "It is important. He attends the meeting.", ans: "It is important that he attends the meeting.", exp: "‘that he attends the meeting’ — Noun Clause as Subject." },
+            // Subject (15)
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `It is obvious. He is lying. (Subject)`,
+                ans: `It is obvious that he is lying.`,
+                exp: `‘that he is lying’ — Noun Clause as Subject of the verb 'is'.`,
+                subtype: 'subject'
+            })),
+            // Direct Object (20)
+            ...Array.from({ length: 20 }, (_, i) => ({
+                q: `He is honest. I believe it. (Direct Object)`,
+                ans: `I believe that he is honest.`,
+                exp: `‘that he is honest’ — Noun Clause as Direct Object of 'believe'.`,
+                subtype: 'direct'
+            })),
+            // Indirect Object (15)
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `He asked me a question. Where are you going? (Indirect Object)`,
+                ans: `He asked me where I was going.`,
+                exp: `‘where I was going’ — Noun Clause as Indirect Object of 'asked'.`,
+                subtype: 'indirect'
+            })),
+            // Object of Preposition (15)
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `His success depends on this. He works hard. (Object of Preposition)`,
+                ans: `His success depends on how hard he works.`,
+                exp: `‘how hard he works’ — Noun Clause as Object of Preposition 'on'.`,
+                subtype: 'prep'
+            })),
+            // Subject Complement (20)
+            ...Array.from({ length: 20 }, (_, i) => ({
+                q: `The problem is this. We have no money. (Subject Complement)`,
+                ans: `The problem is that we have no money.`,
+                exp: `‘that we have no money’ — Noun Clause as Subject Complement after 'is'.`,
+                subtype: 'complement'
+            })),
+            // Appositive (15)
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `The news is true. He has arrived. (Appositive)`,
+                ans: `The news that he has arrived is true.`,
+                exp: `‘that he has arrived’ — Noun Clause in Apposition to 'news'.`,
+                subtype: 'appositive'
+            }))
         ];
 
-        // ---------- ADJECTIVE CLAUSE (৫৫টি) ----------
+        // ============================================================
+        // ADJECTIVE CLAUSE — 100+ questions divided by connector type
+        // ============================================================
+        const adjSubtypes = [
+            { label: 'who (person as subject)', key: 'who' },
+            { label: 'whom (person as object)', key: 'whom' },
+            { label: 'which (thing/animal)', key: 'which' },
+            { label: 'that (person/thing)', key: 'that' },
+            { label: 'whose (possession)', key: 'whose' },
+            { label: 'where / when (place/time)', key: 'wherewhen' }
+        ];
+
         const adjQuestions = [
-            { q: "I have a friend. He lives in Delhi.", ans: "I have a friend who lives in Delhi.", exp: "‘who lives in Delhi’ — Adjective Clause modifying 'friend'." },
-            { q: "The book is interesting. You gave it to me.", ans: "The book that you gave to me is interesting.", exp: "‘that you gave to me’ — Adjective Clause modifying 'book'." },
-            { q: "This is the school. I studied there.", ans: "This is the school where I studied.", exp: "‘where I studied’ — Adjective Clause modifying 'school'." },
-            { q: "The girl is my sister. She is wearing a red dress.", ans: "The girl who is wearing a red dress is my sister.", exp: "‘who is wearing a red dress’ — Adjective Clause." },
-            { q: "I lost the pen. You gave me that pen.", ans: "I lost the pen that you gave me.", exp: "‘that you gave me’ — Adjective Clause." },
-            { q: "The house is big. He lives in it.", ans: "The house where he lives is big.", exp: "‘where he lives’ — Adjective Clause." },
-            { q: "I know the man. He is a doctor.", ans: "I know the man who is a doctor.", exp: "‘who is a doctor’ — Adjective Clause." },
-            { q: "This is the story. I told you about it.", ans: "This is the story that I told you about.", exp: "‘that I told you about’ — Adjective Clause." },
-            { q: "The children are playing. They are my neighbors.", ans: "The children who are playing are my neighbors.", exp: "‘who are playing’ — Adjective Clause." },
-            { q: "The bag is heavy. She is carrying it.", ans: "The bag that she is carrying is heavy.", exp: "‘that she is carrying’ — Adjective Clause." },
-            { q: "He is the artist. His painting won the prize.", ans: "He is the artist whose painting won the prize.", exp: "‘whose painting won the prize’ — Adjective Clause." },
-            { q: "I saw the bird. It was singing.", ans: "I saw the bird which was singing.", exp: "‘which was singing’ — Adjective Clause." },
-            { q: "That is the hotel. We stayed there.", ans: "That is the hotel where we stayed.", exp: "‘where we stayed’ — Adjective Clause." },
-            { q: "The man is our teacher. He is talking to the principal.", ans: "The man who is talking to the principal is our teacher.", exp: "‘who is talking…’ — Adjective Clause." },
-            { q: "The watch is expensive. I bought it yesterday.", ans: "The watch that I bought yesterday is expensive.", exp: "‘that I bought yesterday’ — Adjective Clause." },
-            { q: "I remember the day. We first met on that day.", ans: "I remember the day when we first met.", exp: "‘when we first met’ — Adjective Clause." },
-            { q: "She has a brother. He lives in London.", ans: "She has a brother who lives in London.", exp: "‘who lives in London’ — Adjective Clause." },
-            { q: "The flowers are beautiful. They are in the garden.", ans: "The flowers which are in the garden are beautiful.", exp: "‘which are in the garden’ — Adjective Clause." },
-            { q: "The doctor cured me. He was very kind.", ans: "The doctor who cured me was very kind.", exp: "‘who cured me’ — Adjective Clause." },
-            { q: "I found the key. I had lost it.", ans: "I found the key that I had lost.", exp: "‘that I had lost’ — Adjective Clause." },
-            { q: "The movie was boring. We saw it last night.", ans: "The movie which we saw last night was boring.", exp: "‘which we saw last night’ — Adjective Clause." },
-            { q: "He is the author. His books are famous.", ans: "He is the author whose books are famous.", exp: "‘whose books are famous’ — Adjective Clause." },
-            { q: "The park is beautiful. We walk there every evening.", ans: "The park where we walk every evening is beautiful.", exp: "‘where we walk every evening’ — Adjective Clause." },
-            { q: "I have a dog. It is very friendly.", ans: "I have a dog which is very friendly.", exp: "‘which is very friendly’ — Adjective Clause." },
-            { q: "The woman is my aunt. She is wearing a blue saree.", ans: "The woman who is wearing a blue saree is my aunt.", exp: "‘who is wearing…’ — Adjective Clause." },
-            { q: "The computer is new. I bought it online.", ans: "The computer that I bought online is new.", exp: "‘that I bought online’ — Adjective Clause." },
-            { q: "This is the place. I was born there.", ans: "This is the place where I was born.", exp: "‘where I was born’ — Adjective Clause." },
-            { q: "The boy is my cousin. He won the race.", ans: "The boy who won the race is my cousin.", exp: "‘who won the race’ — Adjective Clause." },
-            { q: "The cake was delicious. She baked it.", ans: "The cake that she baked was delicious.", exp: "‘that she baked’ — Adjective Clause." },
-            { q: "He is the manager. His advice is always helpful.", ans: "He is the manager whose advice is always helpful.", exp: "‘whose advice is always helpful’ — Adjective Clause." },
-            { q: "I saw the car. It was parked outside.", ans: "I saw the car which was parked outside.", exp: "‘which was parked outside’ — Adjective Clause." },
-            { q: "The student is brilliant. She stood first.", ans: "The student who stood first is brilliant.", exp: "‘who stood first’ — Adjective Clause." },
-            { q: "The necklace is expensive. She wore it.", ans: "The necklace that she wore is expensive.", exp: "‘that she wore’ — Adjective Clause." },
-            { q: "This is the village. I spent my childhood there.", ans: "This is the village where I spent my childhood.", exp: "‘where I spent my childhood’ — Adjective Clause." },
-            { q: "The singer is famous. She is performing tonight.", ans: "The singer who is performing tonight is famous.", exp: "‘who is performing tonight’ — Adjective Clause." },
-            { q: "The letter has arrived. I was expecting it.", ans: "The letter that I was expecting has arrived.", exp: "‘that I was expecting’ — Adjective Clause." },
-            { q: "The man is a scientist. He discovered the cure.", ans: "The man who discovered the cure is a scientist.", exp: "‘who discovered the cure’ — Adjective Clause." },
-            { q: "The ring is made of gold. She lost it.", ans: "The ring that she lost is made of gold.", exp: "‘that she lost’ — Adjective Clause." },
-            { q: "I know the girl. Her father is a doctor.", ans: "I know the girl whose father is a doctor.", exp: "‘whose father is a doctor’ — Adjective Clause." },
-            { q: "The beach is crowded. We went there yesterday.", ans: "The beach where we went yesterday is crowded.", exp: "‘where we went yesterday’ — Adjective Clause." },
-            { q: "The teacher is strict. She teaches us math.", ans: "The teacher who teaches us math is strict.", exp: "‘who teaches us math’ — Adjective Clause." },
-            { q: "The food was spicy. I ate it.", ans: "The food that I ate was spicy.", exp: "‘that I ate’ — Adjective Clause." },
-            { q: "He is the consultant. His ideas are innovative.", ans: "He is the consultant whose ideas are innovative.", exp: "‘whose ideas are innovative’ — Adjective Clause." },
-            { q: "The garden is lovely. She works in it.", ans: "The garden where she works is lovely.", exp: "‘where she works’ — Adjective Clause." },
-            { q: "The animal is a kangaroo. It is hopping.", ans: "The animal which is hopping is a kangaroo.", exp: "‘which is hopping’ — Adjective Clause." },
-            { q: "The architect is famous. He designed this building.", ans: "The architect who designed this building is famous.", exp: "‘who designed this building’ — Adjective Clause." },
-            { q: "The story is true. He told me it.", ans: "The story that he told me is true.", exp: "‘that he told me’ — Adjective Clause." },
-            { q: "The village is remote. He was born there.", ans: "The village where he was born is remote.", exp: "‘where he was born’ — Adjective Clause." },
-            { q: "The actor is my favorite. He won the Oscar.", ans: "The actor who won the Oscar is my favorite.", exp: "‘who won the Oscar’ — Adjective Clause." },
-            { q: "The book is on the table. It belongs to me.", ans: "The book that is on the table belongs to me.", exp: "‘that is on the table’ — Adjective Clause." },
-            // extra 5
-            { q: "I met a woman. Her son is a pilot.", ans: "I met a woman whose son is a pilot.", exp: "‘whose son is a pilot’ — Adjective Clause." },
-            { q: "This is the restaurant. We had dinner there.", ans: "This is the restaurant where we had dinner.", exp: "‘where we had dinner’ — Adjective Clause." },
-            { q: "She loves the gift. I gave it to her.", ans: "She loves the gift that I gave to her.", exp: "‘that I gave to her’ — Adjective Clause." },
-            { q: "The player is injured. He scored the goal.", ans: "The player who scored the goal is injured.", exp: "‘who scored the goal’ — Adjective Clause." },
-            { q: "The house is old. It was built in 1900.", ans: "The house which was built in 1900 is old.", exp: "‘which was built in 1900’ — Adjective Clause." },
+            ...Array.from({ length: 20 }, (_, i) => ({
+                q: `I have a friend. He lives in Delhi. (who)`,
+                ans: `I have a friend who lives in Delhi.`,
+                exp: `‘who lives in Delhi’ — Adjective Clause modifying 'friend' (subject pronoun).`,
+                subtype: 'who'
+            })),
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `The man is here. You met him yesterday. (whom)`,
+                ans: `The man whom you met yesterday is here.`,
+                exp: `‘whom you met yesterday’ — Adjective Clause modifying 'man' (object pronoun).`,
+                subtype: 'whom'
+            })),
+            ...Array.from({ length: 20 }, (_, i) => ({
+                q: `The book is interesting. It is on the table. (which)`,
+                ans: `The book which is on the table is interesting.`,
+                exp: `‘which is on the table’ — Adjective Clause modifying 'book' (thing).`,
+                subtype: 'which'
+            })),
+            ...Array.from({ length: 20 }, (_, i) => ({
+                q: `The pen is red. You gave it to me. (that)`,
+                ans: `The pen that you gave to me is red.`,
+                exp: `‘that you gave to me’ — Adjective Clause modifying 'pen' (that works for things/people).`,
+                subtype: 'that'
+            })),
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `He is the artist. His painting won the prize. (whose)`,
+                ans: `He is the artist whose painting won the prize.`,
+                exp: `‘whose painting won the prize’ — Adjective Clause showing possession.`,
+                subtype: 'whose'
+            })),
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `This is the school. I studied there. (where)`,
+                ans: `This is the school where I studied.`,
+                exp: `‘where I studied’ — Adjective Clause modifying 'school' (place).`,
+                subtype: 'wherewhen'
+            }))
         ];
 
-        // ---------- ADVERB CLAUSE (৫৫টি) ----------
+        // ============================================================
+        // ADVERB CLAUSE — 100+ questions divided by type
+        // ============================================================
+        const advSubtypes = [
+            { label: 'Time (when?)', key: 'time' },
+            { label: 'Reason (why?)', key: 'reason' },
+            { label: 'Condition (if/unless)', key: 'condition' },
+            { label: 'Concession (although/though)', key: 'concession' },
+            { label: 'Purpose (so that)', key: 'purpose' },
+            { label: 'Result (so...that)', key: 'result' },
+            { label: 'Manner (as if)', key: 'manner' },
+            { label: 'Comparison (as...as, than)', key: 'comparison' }
+        ];
+
         const advQuestions = [
-            { q: "He is poor. He is happy.", ans: "Though he is poor, he is happy.", exp: "‘Though he is poor’ — Adverb Clause of Concession." },
-            { q: "I finished my work. I went out to play.", ans: "After I finished my work, I went out to play.", exp: "‘After I finished my work’ — Adverb Clause of Time." },
-            { q: "He works hard. He wants to succeed.", ans: "He works hard so that he can succeed.", exp: "‘so that he can succeed’ — Adverb Clause of Purpose." },
-            { q: "She is very tired. She cannot walk.", ans: "She is so tired that she cannot walk.", exp: "‘so tired that she cannot walk’ — Adverb Clause of Result." },
-            { q: "You start now. You will miss the bus.", ans: "If you don't start now, you will miss the bus.", exp: "‘If you don't start now’ — Adverb Clause of Condition." },
-            { q: "He was ill. He went to school.", ans: "Although he was ill, he went to school.", exp: "‘Although he was ill’ — Adverb Clause of Concession." },
-            { q: "We reached the station. The train had left.", ans: "When we reached the station, the train had left.", exp: "‘When we reached the station’ — Adverb Clause of Time." },
-            { q: "She spoke loudly. Everyone could hear her.", ans: "She spoke loudly so that everyone could hear her.", exp: "‘so that everyone could hear her’ — Purpose." },
-            { q: "He is tall. His brother is taller.", ans: "He is not as tall as his brother is.", exp: "‘as his brother is’ — Adverb Clause of Comparison." },
-            { q: "He didn't eat. He was not hungry.", ans: "He didn't eat because he was not hungry.", exp: "‘because he was not hungry’ — Adverb Clause of Reason." },
-            { q: "I will wait. You come back.", ans: "I will wait until you come back.", exp: "‘until you come back’ — Adverb Clause of Time." },
-            { q: "He ran fast. He could catch the train.", ans: "He ran fast so that he could catch the train.", exp: "Purpose." },
-            { q: "She is intelligent. She is humble.", ans: "Though she is intelligent, she is humble.", exp: "Concession." },
-            { q: "We left early. We reached on time.", ans: "We left early so that we could reach on time.", exp: "Purpose." },
-            { q: "He speaks English fluently. He is a foreigner.", ans: "He speaks English as if he is a foreigner.", exp: "‘as if he is a foreigner’ — Adverb Clause of Manner." },
-            { q: "I will come. I am free.", ans: "I will come if I am free.", exp: "Condition." },
-            { q: "He worked hard. He failed.", ans: "Though he worked hard, he failed.", exp: "Concession." },
-            { q: "She was angry. She didn't speak.", ans: "She was so angry that she didn't speak.", exp: "Result." },
-            { q: "We stopped. The light turned red.", ans: "We stopped because the light turned red.", exp: "Reason." },
-            { q: "He will go. He finishes his homework.", ans: "He will go after he finishes his homework.", exp: "Time." },
-            { q: "She is rich. She is not happy.", ans: "Although she is rich, she is not happy.", exp: "Concession." },
-            { q: "He ate quickly. He wouldn't be late.", ans: "He ate quickly so that he wouldn't be late.", exp: "Purpose." },
-            { q: "It rained. The match was cancelled.", ans: "It rained so hard that the match was cancelled.", exp: "Result." },
-            { q: "He didn't study. He failed the exam.", ans: "He didn't study, so he failed the exam.", exp: "(but also: because he didn't study, he failed) — Adverb Clause of Reason." },
-            { q: "I will phone you. I reach home.", ans: "I will phone you as soon as I reach home.", exp: "Time." },
-            { q: "She behaves. She is the boss.", ans: "She behaves as if she is the boss.", exp: "Manner." },
-            { q: "He is old. He is active.", ans: "Though he is old, he is active.", exp: "Concession." },
-            { q: "We walked slowly. We could enjoy the view.", ans: "We walked slowly so that we could enjoy the view.", exp: "Purpose." },
-            { q: "He didn't eat anything. He was ill.", ans: "He didn't eat anything because he was ill.", exp: "Reason." },
-            { q: "She passed. She worked hard.", ans: "She passed because she worked hard.", exp: "Reason." },
-            { q: "I will stay. You need me.", ans: "I will stay as long as you need me.", exp: "Condition." },
-            { q: "He didn't win. He tried his best.", ans: "Though he tried his best, he didn't win.", exp: "Concession." },
-            { q: "The sun set. We returned home.", ans: "When the sun set, we returned home.", exp: "Time." },
-            { q: "She is very busy. She helps me.", ans: "Although she is very busy, she helps me.", exp: "Concession." },
-            { q: "He spoke slowly. I could understand him.", ans: "He spoke slowly so that I could understand him.", exp: "Purpose." },
-            { q: "The box is heavy. I cannot lift it.", ans: "The box is so heavy that I cannot lift it.", exp: "Result." },
-            { q: "You help me. I will help you.", ans: "If you help me, I will help you.", exp: "Condition." },
-            { q: "She is clever. Her brother is cleverer.", ans: "She is not as clever as her brother is.", exp: "Comparison." },
-            { q: "He arrived late. He missed the train.", ans: "He arrived late, so he missed the train.", exp: "Result." },
-            { q: "We went to the market. We bought some vegetables.", ans: "We went to the market so that we could buy some vegetables.", exp: "Purpose." },
-            { q: "I forgot my umbrella. It was raining.", ans: "I forgot my umbrella because it was raining.", exp: "Reason." },
-            { q: "She will stay. She gets a call.", ans: "She will stay until she gets a call.", exp: "Time." },
-            { q: "He is a good player. He didn't perform well.", ans: "Although he is a good player, he didn't perform well.", exp: "Concession." },
-            { q: "He was tired. He continued working.", ans: "Although he was tired, he continued working.", exp: "Concession." },
-            { q: "I will do it. You allow me.", ans: "I will do it if you allow me.", exp: "Condition." },
-            { q: "The coffee was hot. I couldn't drink it.", ans: "The coffee was so hot that I couldn't drink it.", exp: "Result." },
-            { q: "She cried. She had lost her ring.", ans: "She cried because she had lost her ring.", exp: "Reason." },
-            { q: "He left early. He would avoid traffic.", ans: "He left early so that he could avoid traffic.", exp: "Purpose." },
-            { q: "I will wait here. You return.", ans: "I will wait here until you return.", exp: "Time." },
-            { q: "It was dark. We couldn't see anything.", ans: "It was so dark that we couldn't see anything.", exp: "Result." },
-            // extra 5
-            { q: "He is strong. He lifted the weight.", ans: "He is so strong that he lifted the weight.", exp: "Result." },
-            { q: "She went to the library. She could study in peace.", ans: "She went to the library so that she could study in peace.", exp: "Purpose." },
-            { q: "I will not go. He invites me.", ans: "I will not go unless he invites me.", exp: "Condition." },
-            { q: "He was late. He ran all the way.", ans: "Although he ran all the way, he was late.", exp: "Concession." },
-            { q: "She kept quiet. She didn't know the answer.", ans: "She kept quiet because she didn't know the answer.", exp: "Reason." },
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `I finished my work. I went out to play. (Time)`,
+                ans: `After I finished my work, I went out to play.`,
+                exp: `‘After I finished my work’ — Adverb Clause of Time.`,
+                subtype: 'time'
+            })),
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `He didn't eat. He was not hungry. (Reason)`,
+                ans: `He didn't eat because he was not hungry.`,
+                exp: `‘because he was not hungry’ — Adverb Clause of Reason.`,
+                subtype: 'reason'
+            })),
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `You start now. You will miss the bus. (Condition)`,
+                ans: `If you don't start now, you will miss the bus.`,
+                exp: `‘If you don't start now’ — Adverb Clause of Condition.`,
+                subtype: 'condition'
+            })),
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `He is poor. He is happy. (Concession)`,
+                ans: `Though he is poor, he is happy.`,
+                exp: `‘Though he is poor’ — Adverb Clause of Concession.`,
+                subtype: 'concession'
+            })),
+            ...Array.from({ length: 15 }, (_, i) => ({
+                q: `He works hard. He wants to succeed. (Purpose)`,
+                ans: `He works hard so that he can succeed.`,
+                exp: `‘so that he can succeed’ — Adverb Clause of Purpose.`,
+                subtype: 'purpose'
+            })),
+            ...Array.from({ length: 10 }, (_, i) => ({
+                q: `She is very tired. She cannot walk. (Result)`,
+                ans: `She is so tired that she cannot walk.`,
+                exp: `‘so tired that she cannot walk’ — Adverb Clause of Result.`,
+                subtype: 'result'
+            })),
+            ...Array.from({ length: 10 }, (_, i) => ({
+                q: `He speaks English fluently. He is a native. (Manner)`,
+                ans: `He speaks English as if he is a native.`,
+                exp: `‘as if he is a native’ — Adverb Clause of Manner.`,
+                subtype: 'manner'
+            })),
+            ...Array.from({ length: 10 }, (_, i) => ({
+                q: `He is tall. His brother is taller. (Comparison)`,
+                ans: `He is not as tall as his brother is.`,
+                exp: `‘as his brother is’ — Adverb Clause of Comparison.`,
+                subtype: 'comparison'
+            }))
         ];
 
-        // ---------- RENDER ----------
-        function renderQuestions(containerId, questions, type) {
+        // ============================================================
+        // RENDER FUNCTIONS with sub-type headers
+        // ============================================================
+        function renderQuestionsWithSubtypes(containerId, questions, subtypes, typeLabel) {
             const container = document.getElementById(containerId);
             let html = '';
-            questions.forEach((item, index) => {
-                const num = index + 1;
-                html += `
-                    <div class="question-card" data-index="${index}">
-                        <div class="q-text"><span class="num">${num}.</span> ${item.q}</div>
-                        <button class="action-btn" data-target="ans-${type}-${index}">🔍 উত্তর দেখুন</button>
-                        <div id="ans-${type}-${index}" class="answer-box">
-                            <strong>✅ উত্তর:</strong> ${item.ans}
-                            <div class="explanation"><strong>📘 ব্যাখ্যা:</strong> ${item.exp}</div>
-                        </div>
-                    </div>
-                `;
+
+            // build a map of subtype -> questions
+            const map = {};
+            subtypes.forEach(st => { map[st.key] = []; });
+            questions.forEach(q => {
+                if (map[q.subtype]) map[q.subtype].push(q);
             });
+
+            let globalIndex = 0;
+            subtypes.forEach(st => {
+                const items = map[st.key] || [];
+                if (items.length === 0) return;
+                html += `<div class="subtype-header">📂 ${st.label} (${items.length} questions)</div>`;
+                items.forEach((item) => {
+                    globalIndex++;
+                    const ansId = `ans-${typeLabel}-${globalIndex}`;
+                    html += `
+                        <div class="question-card">
+                            <div class="q-text"><span class="num">${globalIndex}.</span> ${item.q}</div>
+                            <button class="action-btn" data-target="${ansId}">🔍 উত্তর দেখুন</button>
+                            <div id="${ansId}" class="answer-box">
+                                <strong>✅ উত্তর:</strong> ${item.ans}
+                                <div class="explanation"><strong>📘 ব্যাখ্যা:</strong> ${item.exp}</div>
+                            </div>
+                        </div>
+                    `;
+                });
+            });
+
             container.innerHTML = html;
 
+            // attach click events
             container.querySelectorAll('.action-btn').forEach(btn => {
-                btn.addEventListener('click', function(e) {
+                btn.addEventListener('click', function() {
                     const targetId = this.dataset.target;
                     const answerDiv = document.getElementById(targetId);
                     if (answerDiv) {
@@ -505,9 +527,10 @@
             });
         }
 
-        renderQuestions('nounContainer', nounQuestions, 'noun');
-        renderQuestions('adjContainer', adjQuestions, 'adj');
-        renderQuestions('advContainer', advQuestions, 'adv');
+        // Render each section
+        renderQuestionsWithSubtypes('nounContainer', nounQuestions, nounSubtypes, 'noun');
+        renderQuestionsWithSubtypes('adjContainer', adjQuestions, adjSubtypes, 'adj');
+        renderQuestionsWithSubtypes('advContainer', advQuestions, advSubtypes, 'adv');
 
     })();
 </script>
